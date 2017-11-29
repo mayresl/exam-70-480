@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Canvas</title>
+	<script>
+		window.onload = function () {
+			var drawingSurface = document.getElementById("drawingSurfaceI");
+			var ctxt = drawingSurface.getContext("2d");
+
+			//line
+			ctxt.beginPath();
+			ctxt.moveTo(10, 10);
+			ctxt.lineTo(225, 350);
+			ctxt.lineWidth = 25;
+			ctxt.stroke();
+
+			var canvas = document.getElementById("drawingSurfaceII");
+			ctxt = canvas.getContext("2d");
+
+			//full circle
+			ctxt.beginPath();
+			ctxt.arc(150, 100, 75, 0, 2 * Math.PI, false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#0f0';
+			ctxt.stroke();
+
+			//a quarter circle (1-3 o'clock)
+			ctxt.beginPath();
+			ctxt.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = 'blue';
+			ctxt.stroke();
+
+			//a quarter circle (6-9 o'clock)
+			ctxt.beginPath();
+			ctxt.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#0ff';
+			ctxt.stroke();
+
+			//a quarter circle (9-12 o'clock)
+			ctxt.beginPath();
+			ctxt.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = '#f00';
+			ctxt.stroke();
+
+			var board = document.getElementById("drawingSurfaceIII");
+			ctxt = board.getContext("2d");
+
+			//quadratic
+			ctxt.beginPath();
+			ctxt.moveTo(10, 380);
+			ctxt.quadraticCurveTo(300, -250, 580, 380);
+			ctxt.lineWidth = 25;
+			ctxt.strokeStyle = 'magenta';
+			ctxt.stroke();
+
+			var square = document.getElementById("drawingSurfaceIV");
+			ctxt = square.getContext("2d");
+
+			//bezier
+			ctxt.beginPath();
+			ctxt.moveTo(125, 20);
+			ctxt.bezierCurveTo(0, 200, 300, 300, 50, 400);
+			ctxt.lineWidth = 20;
+			ctxt.strokeStyle = 'yellow';
+			ctxt.stroke();
+
+			var final = document.getElementById("drawingSurfaceV");
+			ctxt = final.getContext("2d");
+
+			//final
+			ctxt.beginPath();
+			ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+			ctxt.lineTo(150, 125);
+			ctxt.quadraticCurveTo(300, 0, 450, 125);
+			ctxt.lineTo(353, 144);
+			ctxt.strokeStyle = "orange";
+			ctxt.lineCap = "round";
+			ctxt.lineWidth = 10;
+			ctxt.stroke();
+
+			var rect = document.getElementById("drawingSurfaceVI");
+			ctxt = rect.getContext("2d");
+
+			ctxt.beginPath();
+			ctxt.rect(300, 200, 150, 75);
+			ctxt.strokeStyle = "gray";
+			ctxt.lineWidth = 15;
+			ctxt.stroke();
+
+			var canvasAreas = document.getElementsByTagName("canvas");
+			for (var i = 0; i < canvasAreas.length; i++){
+				canvasAreas[i].style.border = "1px solid black";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<canvas id="drawingSurfaceI" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<canvas id="drawingSurfaceII" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<canvas id="drawingSurfaceIII" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<canvas id="drawingSurfaceIV" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<canvas id="drawingSurfaceV" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+
+	<canvas id="drawingSurfaceVI" width="600" height="400">
+		Your browser does not support HTML5.
+	</canvas>
+</body>
+
+</html>

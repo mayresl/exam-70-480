@@ -59,14 +59,6 @@
             }
             innerDiv.replaceNode(newDiv);
             */
-
-            //drawing on canvas
-            var drawingSurface = document.getElementById("drawingSurface");
-            var ctxt = drawingSurface.getContext("2d");
-            ctxt.beginPath();
-            ctxt.moveTo(10, 10);
-            ctxt.lineTo(225, 350);
-            ctxt.stroke();
         }
     </script>
 </head>
@@ -76,7 +68,7 @@
         <div id="outerDiv">
             <p class='mainPara'>Main Paragraph</p>
             <ul>
-                <li>First List Item</li>
+                <li>First List Item (<a href="canvas.html" target="_blank">click</a> to go to canvas.html</li>
                 <li>Second List Item</li>
                 <li>Third List Item</li>
                 <li>Fourth List Item</li>
@@ -111,9 +103,6 @@
             </table>
             <input type="text" /><input type="submit" value="Submit" />
         </div>
-        <canvas id="drawingSurface" width="600" height="400">
-            Your browser does not support HTML5.
-        </canvas>
         <label id="info"></label>
     </article>
     <article>
@@ -121,3 +110,4 @@
         <video src="../assets/SampleVideo.mp4" controls height="280" width="210" loop poster="../assets/Bunny.png"> </video>
     </article>
 </body>
+</html>
